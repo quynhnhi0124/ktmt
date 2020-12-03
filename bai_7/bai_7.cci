@@ -1,0 +1,11 @@
+VERSION:3 SOURCE_TIMESTAMP:51664DA3
+NODE:I LEVEL:0 LINE:9 "C:\Users\BVCN 88\OneDrive\Máy tính\KTMT\ktmt_tailieu\robotic\Code_vision\inc\io.h"
+NODE:I LEVEL:0 LINE:10 "C:\Users\BVCN 88\OneDrive\Máy tính\KTMT\ktmt_tailieu\robotic\Code_vision\inc\delay.h"
+NODE:I LEVEL:0 LINE:11 "C:\Users\BVCN 88\OneDrive\Máy tính\KTMT\ktmt_tailieu\robotic\Code_vision\inc\stdio.h"
+NODE:M LEVEL:0 LINE:12 "servo"
+NODE:M LEVEL:0 LINE:13 "BT1"
+NODE:M LEVEL:0 LINE:14 "BT2"
+NODE:V LEVEL:0 LINE:15 "dem -> R4,R5"
+NODE:V LEVEL:0 LINE:16 "vitri -> R7"
+NODE:F LEVEL:0 LINE:17 "timer0_ovf_isr(void)"
+NODE:F LEVEL:0 LINE:30 "main(void)"

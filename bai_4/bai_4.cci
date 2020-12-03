@@ -1,0 +1,9 @@
+VERSION:3 SOURCE_TIMESTAMP:51505334
+NODE:I LEVEL:0 LINE:8 "C:\Users\BVCN 88\OneDrive\Máy tính\ktmt1\robotic\Code_vision\inc\io.h"
+NODE:I LEVEL:0 LINE:9 "C:\Users\BVCN 88\OneDrive\Máy tính\ktmt1\robotic\Code_vision\inc\alcd.h"
+NODE:I LEVEL:0 LINE:10 "C:\Users\BVCN 88\OneDrive\Máy tính\ktmt1\robotic\Code_vision\inc\delay.h"
+NODE:M LEVEL:0 LINE:11 "ct1"
+NODE:M LEVEL:0 LINE:12 "ct2"
+NODE:M LEVEL:0 LINE:13 "ct3"
+NODE:V LEVEL:0 LINE:14 "mode -> R4,R5"
+NODE:F LEVEL:0 LINE:18 "main(void)"

@@ -1,0 +1,17 @@
+/*
+ * b1.c
+ *
+ * Created: 27-Nov-20 9:20:53 AM
+ * Author: QuynhNhi
+ */
+
+#include <io.h>
+
+void main(void)
+{
+while (1)
+    {
+    // Please write your application code here
+
+    }
+}

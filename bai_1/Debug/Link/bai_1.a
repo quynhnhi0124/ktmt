@@ -1,0 +1,84 @@
+;/*
+; * bai_1.c
+; *
+; * Created: 25-Sep-20 9:43:41 AM
+; * Author: QuynhNhi
+; */
+; //viet chuong trinh dieu khien den led tren board mach
+; /*
+; den led duoc ket noi vao PE5 (port E bit 5)
+; de dieu khien duoc den led thi du lieu phai di tu mcu ra led (output)
+; tuy thuoc vao ket noi LED voi MCU la loai nao ma logic xuat ra de dieu khien tuong ung la 0 hoac la 1 de bat den.
+;    neu noi loai k thi LED sang khi logic xuat ra = 0
+;    neu noi loai a thi LED sang khi logic xuat ra = 1
+;    trong mach dien duoc ket noi theo dang k
+; */
+; /*
+; Trong AVR co 3 thanh ghi tac dong vao tung port
+;    DDR = data direction = thanh ghi chi huong du lieu
+;        neu DDR = 1 thi du lieu duoc dieu khien theo huong di tu MCU ra ngoai DV - thiet bi (output)
+;        neu DDR = 0 thi du lieu duoc dieu khien nhan tu DV - MCU (input)
+;    PORT la thanh ghi du lieu. Neu
+;        port = 1 + output = ghi logic 1 o loi ra(nghia la noi loi ra voi VCC - dien ap nguon duoi = 5V, 3.3V ,...)
+;        port = 1 + input = loi vao duoc PULL UP (duoc treo len nguon VCC = 5V, 3.3V, ...)
+;        port = 0 ghi logic 0 o loi ra (nghia la noi loi ra voi GND = 0V)
+;    PIN la thanh ghi doc du lieu loi vao
+; */
+; /*
+; De PE5 la loi ra chung ta phai tac dong vao DDR
+; DDRE.5 = 1;
+; DDRE = 0b0010 0000
+; DDRE = 0x20 x :hex
+; vi LED noi theo kieu K nen muon LED sang chung ta phai xuat logic 0V = GND
+; PORTE.5 = 0;
+; compile ctrl F9
+; */
+;#include <io.h>
+;PCODE: $00000000 VOL: 0
+	#ifndef __SLEEP_DEFINED__
+;PCODE: $00000001 VOL: 0
+	#define __SLEEP_DEFINED__
+;PCODE: $00000002 VOL: 0
+	.EQU __se_bit=0x20
+;PCODE: $00000003 VOL: 0
+	.EQU __sm_mask=0x1C
+;PCODE: $00000004 VOL: 0
+	.EQU __sm_powerdown=0x10
+;PCODE: $00000005 VOL: 0
+	.EQU __sm_powersave=0x18
+;PCODE: $00000006 VOL: 0
+	.EQU __sm_standby=0x14
+;PCODE: $00000007 VOL: 0
+	.EQU __sm_ext_standby=0x1C
+;PCODE: $00000008 VOL: 0
+	.EQU __sm_adc_noise_red=0x08
+;PCODE: $00000009 VOL: 0
+	.SET power_ctrl_reg=mcucr
+;PCODE: $0000000A VOL: 0
+	#endif
+;PCODE: $0000000B VOL: 0
+;PCODE: $0000000C VOL: 0
+;
+;void main(void)
+; 0000 0027 {
+
+	.CSEG
+;PCODE: $0000000D VOL: 0
+; 0000 0028 DDRE.5 = 0x20;
+;PCODE: $0000000E VOL: 0
+;PCODE: $0000000F VOL: 0
+; 0000 0029 PORTE = 0x20;
+;PCODE: $00000010 VOL: 0
+;PCODE: $00000011 VOL: 0
+; 0000 002A while (1)
+;PCODE: $00000012 VOL: 0
+; 0000 002B     {
+; 0000 002C     // Please write your application code here
+; 0000 002D     //PORTE.5 = 0;
+; 0000 002E     }
+;PCODE: $00000013 VOL: 0
+;PCODE: $00000014 VOL: 0
+; 0000 002F }
+;PCODE: $00000015 VOL: 0
+;PCODE: $00000016 VOL: 0
+;PCODE: $00000017 VOL: 0
